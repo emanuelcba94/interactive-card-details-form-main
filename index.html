@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- card -->
+    <div class="card">
+      <!-- card front -->
+      <div class="card-front">
+        <img src="./images/bg-card-front.png" alt="bg-card-front">
+        <div class="card-front-info">
+          <img src="./images/card-logo.svg" alt="card-logo">
+          <div>
+            <p class="card-numbers" id="card-numbers">0000 0000 0000 0000</p>
+            <div class="card-name-date">
+              <p class="card-name" id="card-name">Jane Appleseed</p>
+              <p class="card-date">
+              <span id="card-month">00</span>/<span id="card-year">00</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- card back -->
+      <div class="card-back">
+        <img src="./images/bg-card-back.png" alt="card-back">
+        <div class="card-code">
+          <p class="card-cvc" id="card-cvc">
+            000
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- form -->
+    <form class="form" id="form">
+      <!-- card-name -->
+      <div class="form-group">
+        <label for="input-name" class="label">Cardholder Name</label>
+        <input type="text" id="input-name" class="input" placeholder="e.g. Jane Appleseed">
+        <span class="name-error">Can't be blank</span>
+      </div>
+      <!-- card-number -->
+      <div class="form-group">
+        <label for="input-number" class="label">Card Number</label>
+        <input type="text" id="input-number" class="input" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
+        <span class="number-error">Wrong format, numbers only</span>
+      </div>
+      <!-- card-date -->
+      <div class="form-group form-group-date">
+        <div class="date">
+          <label for="input-month" class="label">Exp. Date (MM/YY)</label>
+          <div>
+              <div>
+                <input type="text" id="input-month" class="input" placeholder="MM" maxlength="2">
+                <span class="monthYear-error">Can't be blank</span>
+              </div>
+              <div>
+                <input type="text" id="input-year" class="input" placeholder="YY" maxlength="2">
+                <span class="monthYear-error"></span>
+              </div>
+          </div>
+        </div>
+        <div class="cvc">
+          <label for="input-cvc" class="label">CVC</label>
+          <input type="text" id="input-cvc" class="input" placeholder="e.g. 123" maxlength="3">
+          <span class="cvc-error">Can't be blank</span>
+        </div>
+      </div>
+      <!-- card-btn -->
+      <div class="form-group">
+        <button type="submit" class="card-btn" id="card-confirm">Confirm</button>
+      </div>
+    </form>
+
+    <!-- Completed state start -->
+    <div class="card-complete" id="card-complete">
+      <img src="./images/icon-complete.svg" alt="icon-complete">
+      <div class="card-complete-texts">
+        <p class="card-complete-title">Thank you!</p>
+        <p class="card-complete-paragraph">We've added your card details</p>
+      </div>
+      <!-- btn -->
+      <button type="submit" class="card-btn" id="card-continue">Continue</button>
+    </div>
+  </div>
+  
+  <!-- JS -->
+  <script src="./js/script.js"></script>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Emanuel Bonardo</a>.
+  </div> -->
+</body>
+
+</html>
